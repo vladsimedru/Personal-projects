@@ -26,6 +26,9 @@ public class UserLocation {
     @JoinColumn(name="user_id", nullable=false)
     private User user;
 
+    public UserLocation() {
+    }
+
     public UserLocation(String latitude, String longitude, Date date, User user) {
         this.latitude = latitude;
         this.longitude = longitude;
