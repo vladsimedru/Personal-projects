@@ -14,4 +14,6 @@ public interface UserLocationRepository extends CrudRepository<UserLocation,Long
 
     @Query(value="SELECT * FROM user_location WHERE user_id=?1 AND date>=?2 AND date<=?3",nativeQuery = true)
     List<UserLocation> customQuery(final Long userId,final Date startDate,final Date endDate);
+
+    void deleteById(final Long id);
 }

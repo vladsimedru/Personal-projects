@@ -2,6 +2,7 @@ package org.scd.controller;
 
 import org.scd.config.exception.BusinessException;
 import org.scd.model.UserLocation;
+import org.scd.model.dto.UpdatedLocationDTO;
 import org.scd.model.dto.UserLocationDTO;
 import org.scd.model.dto.UserLocationFilterDTO;
 import org.scd.service.UserLocationServiceImpl;
@@ -40,4 +41,16 @@ public class LocationController {
     public ResponseEntity<List<UserLocation>> getLocationsByUserIdAndDate(@RequestBody UserLocationFilterDTO userLocationFilterDTO) throws BusinessException {
         return ResponseEntity.ok(userLocationServiceImpl.getLocationsByUserIdAndDate(userLocationFilterDTO));
     }
+
+    @DeleteMapping(path = "/locations/delete/{id}")
+    public void deleteLocationById(@PathVariable final Long id) throws BusinessException {
+       userLocationServiceImpl.deleteLocationById(id);
+    }
+
+    @PutMapping(path = "/locations/update/{id}")
+    public ResponseEntity<UserLocation> updateLocationById(@PathVariable final Long id,@RequestBody final UpdatedLocationDTO updatedLocationDTO) throws BusinessException{
+        updatedLocationDTO.setId(id);
+        return ResponseEntity.ok(userLocationServiceImpl.updateLocationById(updatedLocationDTO));
+    }
+
 }

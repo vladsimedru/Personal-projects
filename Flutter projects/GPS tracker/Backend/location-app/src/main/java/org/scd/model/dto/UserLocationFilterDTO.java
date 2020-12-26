@@ -1,7 +1,5 @@
 package org.scd.model.dto;
 
-import java.text.DateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 
 public class UserLocationFilterDTO {
@@ -14,15 +12,11 @@ public class UserLocationFilterDTO {
     public UserLocationFilterDTO() {
     }
 
-    public UserLocationFilterDTO(Long userId) {
-        this.userId = userId;
-    }
-
-    public UserLocationFilterDTO(Long userId, Date startDate, Date endDate) {
-        this.userId = userId;
-        this.startDate = startDate;
-        this.endDate = endDate;
-    }
+//    public UserLocationFilterDTO(Long userId, Date startDate, Date endDate) {
+//        this.userId = userId;
+//        this.startDate = startDate;
+//        this.endDate = endDate;
+//    }
 
     public Long getUserId() {
         return userId;
