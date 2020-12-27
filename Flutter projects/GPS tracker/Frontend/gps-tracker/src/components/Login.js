@@ -6,7 +6,11 @@ const [count, setCount] = useState(0)
 const [username, setUsername]=useState('')
 const [password,setPassword]=useState('')
 
-console.log(username)
+loginClickedHandler(()=>{
+    sad
+})
+  
+
     return (
         <div> 
             <button onClick={()=>setCount(count+1)}>Count {count}</button>
