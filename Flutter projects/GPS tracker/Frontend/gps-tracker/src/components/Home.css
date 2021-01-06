@@ -1,0 +1,23 @@
+.map {
+  display: flex;
+  background-color: yellow;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.top {
+  border-style: solid;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  background-color: whitesmoke;
+  justify-content: space-between;
+}
+
+.search{
+ display:flex;
+ flex-direction: row;
+ justify-content: space-around;
+ align-items: baseline;
+}
+
