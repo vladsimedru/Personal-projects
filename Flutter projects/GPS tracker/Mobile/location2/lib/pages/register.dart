@@ -28,7 +28,7 @@ class _RegisterState extends State<Register> {
   }
 
   Future<Response> register(String firstName,String lastName,String email,String password,String confirmPassword) async {
-    String url = 'http://192.168.0.107:8080/users/register';
+    String url = 'http://192.168.0.108:8080/users/register';
     String basicAuth =
         'Basic ' + base64Encode(utf8.encode('$email:$password'));
     Map<String, String> headers = {
@@ -177,6 +177,9 @@ class _RegisterState extends State<Register> {
                             ),
                             child: TextField(
                               controller: passwordConfirmController,
+                              obscureText: true,
+                              autocorrect: false,
+                              enableSuggestions: false,
                               decoration: InputDecoration(
                                 hintText:"Confirm Password",
                                 border:InputBorder.none,

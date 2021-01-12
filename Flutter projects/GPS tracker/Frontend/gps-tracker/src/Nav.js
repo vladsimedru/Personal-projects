@@ -4,7 +4,7 @@ import { Nav,Form, Button, FormControl, Navbar, NavDropdown } from "react-bootst
 
 function Navigator() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="night" expand="lg">
     <Navbar.Brand href="#home">Gps-Tracker</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">

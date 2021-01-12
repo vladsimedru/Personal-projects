@@ -61,7 +61,7 @@ class _HomeState extends State<Home> {
      print('${prefs.getString('email')}');
      print('${prefs.getString('password')}');
 
-     String url = 'http://192.168.0.107:8080/locations';
+     String url = 'http://192.168.0.108:8080/locations';
      String basicAuth =
          'Basic ' + base64Encode(utf8.encode('${prefs.getString('email')}:${prefs.getString('password')}'));
      Map<String, String> headers = {

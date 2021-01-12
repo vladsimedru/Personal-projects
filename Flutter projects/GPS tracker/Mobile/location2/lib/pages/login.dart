@@ -12,8 +12,8 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
 
-  final emailController=TextEditingController(text: 'ionalex@yahoo.com');
-  final passwordController=TextEditingController(text:'12345678');
+  final emailController=TextEditingController(text: 'admin@admin.com');
+  final passwordController=TextEditingController(text:'Password1!');
 
   @override
   void initState() {
@@ -28,7 +28,7 @@ class _LoginState extends State<Login> {
   }
 
   Future<Response> sendData(String email,String password) async {
-   String url = 'http://192.168.0.107:8080/users/login';
+   String url = 'http://192.168.0.108:8080/users/login';
    String basicAuth =
        'Basic ' + base64Encode(utf8.encode('$email:$password'));
    Map<String, String> headers = {

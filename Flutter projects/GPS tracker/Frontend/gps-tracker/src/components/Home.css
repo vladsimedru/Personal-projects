@@ -1,12 +1,11 @@
 .map {
   display: flex;
-  background-color: yellow;
   justify-content: center;
   flex-direction: column;
+  padding-top: 5px;
 }
 
 .top {
-  border-style: solid;
   flex-direction: column;
   display: flex;
   text-align: center;
