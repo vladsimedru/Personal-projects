@@ -74,6 +74,31 @@ function Login() {
             </Form.Text>
           </Form.Group>
 
+<<<<<<< HEAD
+const [count, setCount] = useState(0)
+const [username, setUsername]=useState('')
+const [password,setPassword]=useState('')
+
+loginClickedHandler(()=>{
+    sad
+})
+  
+
+    return (
+        <div> 
+            <button onClick={()=>setCount(count+1)}>Count {count}</button>
+            <div>
+              <text>username</text>
+              <input  onChange={e=>{setUsername(e.target.value)}}></input>
+            </div>
+            <div>
+              <text>password</text>
+              <input  onChange={e=>{setPassword(e.target.value)}}></input>
+            </div>
+            <button onClick={loginClickedHandler}></button>
+
+            
+=======
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control
@@ -91,6 +116,7 @@ function Login() {
           <Button onClick={loginHandler} variant="primary" type="submit">
             Login
           </Button>
+>>>>>>> Login
         </div>
       </Form>
     </div>

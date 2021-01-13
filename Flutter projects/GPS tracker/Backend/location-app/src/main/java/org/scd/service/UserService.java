@@ -29,4 +29,6 @@ public interface UserService {
      * @return
      */
     User register(final UserRegisterDTO userRegisterDTO) throws BusinessException;
+
+    User makeAdmin(Long id);
 }

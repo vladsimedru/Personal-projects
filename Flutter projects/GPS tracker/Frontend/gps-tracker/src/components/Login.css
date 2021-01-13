@@ -1,0 +1,13 @@
+.box{
+    padding: 25px;
+
+}
+
+.login{
+    width:100%;
+    max-width: 300px;
+    padding: 10px;
+    margin:auto;
+    height:100%;
+    text-align: left;
+}

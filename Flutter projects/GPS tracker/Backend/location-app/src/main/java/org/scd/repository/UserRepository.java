@@ -20,4 +20,6 @@ public interface UserRepository extends CrudRepository<User, Long> {
     User save(User user);
 
     User getById(Long id);
+
+    void deleteById(final Long id);
 }

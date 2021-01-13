@@ -1,0 +1,11 @@
+.user{
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-evenly;
+}

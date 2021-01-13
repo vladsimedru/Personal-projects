@@ -4,6 +4,7 @@ import org.scd.config.exception.BusinessException;
 import org.scd.model.User;
 import org.scd.model.dto.UserLoginDTO;
 import org.scd.model.dto.UserRegisterDTO;
+import org.scd.model.security.Role;
 import org.scd.repository.RoleRepository;
 import org.scd.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -12,8 +13,10 @@ import org.springframework.stereotype.Service;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -99,5 +102,23 @@ public class UserServiceImpl implements UserService {
         user.setPassword(passwordEncoder.encode(userRegisterDTO.getPassword()));
         user.setRoles(roleRepository.findByRole("BASIC_USER"));
         return userRepository.save(user);
+    }
+
+    @Override
+    public User makeAdmin(Long id){
+        User adminUser=userRepository.getById(id);
+        Set<Role> roleList= roleRepository.findAll();
+        adminUser.setRoles( roleList);
+        return userRepository.save(adminUser);
+    }
+
+    public void delete(Long id) {
+        userRepository.deleteById(id);
+    }
+
+    public User makeBasicUser(Long id) {
+        User basicUser=userRepository.getById(id);
+        basicUser.setRoles(roleRepository.findByRole("BASIC_USER"));
+        return userRepository.save(basicUser);
     }
 }
